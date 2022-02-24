@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "88hAbzucppd0g2cfNWG/dOE0YJSymbH+wlImYqXOi2UM0PJ0LApTMWOHNcMLg5l0aI56O0Ym521Kdc1vtuZjKw==",
+  "dgSpecHash": "pRnMGIqIZZILGWE59rDiR7aOnu4TZk97M5AWfc3RzrMBB/zfX6509lRXPsL3AMLXSJFJ5ukaUd+exhpfA2UAtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\AdoNetBasics\\AdoNetBasics.csproj",
+  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\AdoNetBasics\\AdoNetBasics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

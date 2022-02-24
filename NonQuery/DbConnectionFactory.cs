@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace NonQuery
 {
+    // Bağlantı fabrikası
     public static class DbConnectionFactory
     {
-        private const string ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Northwind;Integrated Security=true";
+        private const string ConnectionString = "Server=.; Database=Northwind; Integrated Security=true;";
 
         public static SqlConnection Create()
         {

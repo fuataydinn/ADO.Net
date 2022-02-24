@@ -18,18 +18,23 @@ namespace NonQuery
         {
             InitializeComponent();
         }
+
         private void CategoryGridForm_Load(object sender, EventArgs e)
         {
-            //using blogu : try-finally kullanımının pratik bir yazım seklidir
-            //using blogu icerisinde instance'lanan nesneyi artık kendimiz Dispose yapmıyıcaz
-            //İcinde cath blogu yok--- exeption yakalamak istiyorsak icine try-cath tanımlamalıyız
-            //Using'te sadece Dispose edilenlerde kullanılabilir !! 
-            using(var connection = new SqlConnection())
+            // using bloğu; try-finally kullanımının pratik bir yazım şeklidir
+            // using parantezleri () içerisinde oluşturduğunuz instance, scope (süslü parantez)
+            // tamamlandığında gizli bir finally bloğu içerisinde Dispose edilecektir
+
+            // Biz using bloğu içerisinde instance'lanan nesneyi artık kendimiz Dispose yapmayacağız
+
+            // using bloğunda yalnızca Dispose edilebilir (IDisposable interface'ini implement etmiş)
+            // sınıfların instance'ı kullanılabilir
+            using (var connection = new SqlConnection())
             {
-                connection.ConnectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Northwind;Integrated Security=true";
+                connection.ConnectionString = "Server = .; Database = Northwind; Integrated Security = true;";
 
                 var command = new SqlCommand();
-                command.CommandText = "select*from Categories";
+                command.CommandText = "select * from Categories";
                 command.Connection = connection;
 
                 try
@@ -41,16 +46,14 @@ namespace NonQuery
                     {
                         while (dataReader.Read())
                         {
-                            //Bu yaptıgım isleme Data Mapping adı verilir.
-                            //ORM Object Relational Mapping
-                            //EntityFramework
-                            //nHibernate
-                            //Dapper (Data Mapper, Dotnet Mapper)
+                            // Bu yaptığım işleme Data Mapping adı veriliyor
                             var category = new Category()
                             {
-                                Id=(int)dataReader["CategoryID"],
-                                Name=(string)dataReader["CategoryName"],
-                                Description=dataReader["Description"] !=DBNull.Value ? (string)dataReader["Description"]:default
+                                Id = (int)dataReader["CategoryID"],
+                                Name = (string)dataReader["CategoryName"],
+                                Description = dataReader["Description"] != DBNull.Value
+                                    ? (string)dataReader["Description"]
+                                    : default
                             };
 
                             categoryList.Add(category);
@@ -62,35 +65,39 @@ namespace NonQuery
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Hata meydana geldi ; \n\r"+ex.Message);
+                    MessageBox.Show("Hata meydana geldi;\n\r" + ex.Message);
                 }
-              
-            }       
-            //Yukarıdaki usingte asagdaki gibi kod calısıyor
+            }
+
+
+            // Proje derlendiğinde yukarıdaki using bloğu aşağıdakine benzer bir koda dönüştürülür
+
             //var connection = new SqlConnection();
             //try
             //{
-
+            //    // işlemler
             //}
             //finally
             //{
-
+            //    connection.Dispose();
             //}
         }
 
         private void grdCategories_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            //e nesnesi bana suan gerceklesen Event ile ilgili ek bilgileri gonderiyor
-            //Suan metodunu yazdıgım Event "tablonun hücresine çift tıklandıgında" Event'i oldugu icin bana e nesnesinin hücresinin satır
-            //index'i gonderiliyor.
-            //O satır index'ini kullanarak grid'in hangi satırına tıklanmıs onu bulabilirim
+            // e nesnesi bana şu an gerçekleşen Event ile ilgili ek bilgileri gönderiyor
+            // Şu an metodunu yazdığım Event "tablonun hücresine çift tıklandığı an" event'i olduğu için
+            // bana e nesnesinden hücrenin satır index'i gönderiliyor
+
+            // O satır index'ini kullanarak grid'in hangi satırına tıklanmış onu bulabilirim
             var clickedRow = grdCategories.Rows[e.RowIndex];
-            var idCell = clickedRow.Cells["colCategoryId"]; //once satırı bulduk-- sonra hücreyi bulduk
+            var idCell = clickedRow.Cells["colCategoryId"];
             var categoryId = (int)idCell.Value;
 
             var updateForm = new CategoryUpdateForm(categoryId);
-            updateForm.MdiParent = MdiParent;//Main form bu formun sahibi
+            updateForm.MdiParent = MdiParent;
             updateForm.Show();
+            
         }
     }
 }

@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
+      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
       "projectName": "ExecuteScalarPractice",
-      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
+      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
       "packagesPath": "C:\\Users\\faydn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\ExecuteScalarPractice\\obj\\",
+      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\ExecuteScalarPractice\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\faydn\\AppData\\Roaming\\NuGet\\NuGet.Config",

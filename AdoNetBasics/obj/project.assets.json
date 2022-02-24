@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\AdoNetBasics\\AdoNetBasics.csproj",
+      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\AdoNetBasics\\AdoNetBasics.csproj",
       "projectName": "AdoNetBasics",
-      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\AdoNetBasics\\AdoNetBasics.csproj",
+      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\AdoNetBasics\\AdoNetBasics.csproj",
       "packagesPath": "C:\\Users\\faydn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Wissen\\Bacend\\Ado.NET\\Ado.Net\\AdoNetBasics\\obj\\",
+      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\AdoNetBasics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\faydn\\AppData\\Roaming\\NuGet\\NuGet.Config",

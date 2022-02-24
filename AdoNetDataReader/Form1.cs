@@ -13,57 +13,46 @@ namespace AdoNetDataReader
 {
     public partial class Form1 : Form
     {
+        private const string ColId = "CategoryId";
+        private const string ColName = "CategoryName";
+        private const string ColDescription = "Description";
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private const string colId = "CategoryID";
-        private const string colCategoryName = "CategoryName";
-        private const string colDescription = "Description";
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<Category> categoryList = new List<Category>();
+            var connection = new SqlConnection(
+                "Data Source=.; Initial Catalog=Northwind; Integrated Security=true;");
 
-            //Daha öncden bu nuget yüklendiği için referansını localden getirerek yükleyecek.
-            SqlConnection connection = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Northwind;Trusted_Connection=true");
-
-            SqlCommand command = new SqlCommand("Select*From Categories", connection);
-
+            var command = new SqlCommand(
+                "select * from Categories", connection);
 
             connection.Open();
 
-
             SqlDataReader dataReader = command.ExecuteReader();
-            Category category;
-            while (dataReader.Read()) //dataReader her seferinde Read ile bir satıra denk gelirse orası için çalışıyor.
+
+            var categoryList = new List<Category>();
+
+            while (dataReader.Read())
             {
-                category = new Category()
+                var category = new Category()
                 {
-                    //Adonet te bu şekilde değerin boşmu değil mi bilgisini görebilirim..
-                    Id = dataReader[colId] != DBNull.Value ? (int)dataReader[colId] : default,
-                    Name = dataReader[colCategoryName] != DBNull.Value ? (string)dataReader[colCategoryName] : default,
-                    Description = dataReader[colDescription] != DBNull.Value ? (string)dataReader[colDescription] : default,
-                    //Const değerler kullanılmadğı zaman şu şekilde tanım yapabiliriz:Name = (string)dataReader["CategoryName"],
+                    // Null check işlemini satır içinde TERNARY kullanarak bu şekilde yapabilirim
+                    Id = dataReader[ColId] != DBNull.Value ? (int)dataReader[ColId] : default,
+                    Name = dataReader[ColName] != DBNull.Value ? (string)dataReader[ColName] : default,
+                    Description = dataReader[ColDescription] != DBNull.Value ? (string)dataReader[ColDescription] : default
                 };
 
                 categoryList.Add(category);
-
-                //Böyle yapınca durmadan üstüne yazacağı için bizim bir liste oluşturmamız gerekecek.
-                //var categoryId=(int)dataReader["CategoryID"];
-                //var categoryName = (string)dataReader["CategoryName"];
             }
 
-            dataGridView1.DataSource = categoryList;
-
-            dataReader.Close();//Burada dönen Read in kapatılması gerekli
+            dataReader.Close();
 
             connection.Close();
-
             connection.Dispose();
-
         }
-
-
     }
 }

@@ -17,46 +17,42 @@ namespace ExecuteScalarPractice
         {
             InitializeComponent();
         }
-        private int counter=0;
-        //Butona bastığımız an combobox datasourcuna bu değerler gidecek.
-        private void btnGetCategoryName_Click(object sender, EventArgs e)
+
+        private void btnGetCategoryNames_Click(object sender, EventArgs e)
         {
-            if (counter>=1)
-            {
-                cmbCategories.Items.Clear();
-            }
-            SqlConnection connection = new SqlConnection();
+            var connection = new SqlConnection("Server=.; Database=Northwind; Integrated Security=true;");
 
-            connection.ConnectionString = "Server=.;Database=NorthwindEnglish;Integrated Security=true";
-
-            SqlCommand command = new SqlCommand();
-
+            var command = new SqlCommand();
             command.Connection = connection;
+            command.Connection.Open();
 
-            connection.Open();//Bir open açtığında birden fazla kod çalıştırılabilir
+            command.CommandText = "select COUNT(0) from Categories";
 
-            //* gibi bir şeylerin yerine geçen ifadelere WildCard (Vahşi Kart) deniliyor. Genel bir ifade.
-            command.CommandText =  "Select Count(*) From Categories";
+            var rowCount = (int)command.ExecuteScalar();
 
-            //Count  da olsa bir değer döndüreceği için bir değer döndürecek
-            int categoryCount=(int)command.ExecuteScalar();//Döngüyü dinamik hale getiriyor
-
-            for (int i = 1; i < categoryCount; i++)
+            for (int i = 0; i < rowCount; i++)
             {
-                command.CommandText = $@"
-Select CategoryName 
-From Categories where CategoryID={i}
-";
-                var result = command.ExecuteScalar();//Sonuç null dönebilir diye ilk önce kontrol edecek. Mesela beş numraya gitti ama o numarada kategori yoksa null olarak işaretlencek.
-              
-                if (result!=null)//Null Check
+                command.CommandText = @$"
+select
+    CategoryName
+from Categories
+where CategoryID = {i + 1}";
+
+                var result = command.ExecuteScalar();
+                if (result != null) // Null check
                 {
-                    cmbCategories.Items.Add(result);
-                } 
+                    var categoryName = (string)result;
+                    cmbCategories.Items.Add(categoryName);
+                }
+
             }
-            counter=counter+1;
-            connection.Close();
+            command.Connection.Close();
             connection.Dispose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

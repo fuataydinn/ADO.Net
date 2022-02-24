@@ -46,7 +46,8 @@ namespace NonQuery
             this.grdCategories.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdCategories.Location = new System.Drawing.Point(0, 0);
             this.grdCategories.Name = "grdCategories";
-            this.grdCategories.RowTemplate.Height = 25;
+            this.grdCategories.RowHeadersWidth = 51;
+            this.grdCategories.RowTemplate.Height = 29;
             this.grdCategories.Size = new System.Drawing.Size(800, 450);
             this.grdCategories.TabIndex = 0;
             this.grdCategories.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCategories_CellDoubleClick);
@@ -55,26 +56,32 @@ namespace NonQuery
             // 
             this.colCategoryId.DataPropertyName = "Id";
             this.colCategoryId.HeaderText = "Kategori Id";
+            this.colCategoryId.MinimumWidth = 6;
             this.colCategoryId.Name = "colCategoryId";
             this.colCategoryId.ReadOnly = true;
+            this.colCategoryId.Width = 125;
             // 
             // colCategoryName
             // 
             this.colCategoryName.DataPropertyName = "Name";
             this.colCategoryName.HeaderText = "Kategori Adı";
+            this.colCategoryName.MinimumWidth = 6;
             this.colCategoryName.Name = "colCategoryName";
             this.colCategoryName.ReadOnly = true;
+            this.colCategoryName.Width = 125;
             // 
             // colDescription
             // 
             this.colDescription.DataPropertyName = "Description";
             this.colDescription.HeaderText = "Açıklaması";
+            this.colDescription.MinimumWidth = 6;
             this.colDescription.Name = "colDescription";
             this.colDescription.ReadOnly = true;
+            this.colDescription.Width = 125;
             // 
             // CategoryGridForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.grdCategories);

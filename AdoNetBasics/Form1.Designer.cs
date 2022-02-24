@@ -30,48 +30,48 @@ namespace AdoNetBasics
         private void InitializeComponent()
         {
             this.btnReadCategory = new System.Windows.Forms.Button();
-            this.numCategoryID = new System.Windows.Forms.NumericUpDown();
+            this.numCategoryId = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numCategoryID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCategoryId)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReadCategory
             // 
-            this.btnReadCategory.Location = new System.Drawing.Point(335, 142);
+            this.btnReadCategory.Location = new System.Drawing.Point(195, 81);
             this.btnReadCategory.Name = "btnReadCategory";
-            this.btnReadCategory.Size = new System.Drawing.Size(120, 33);
+            this.btnReadCategory.Size = new System.Drawing.Size(138, 49);
             this.btnReadCategory.TabIndex = 0;
-            this.btnReadCategory.Text = "Kategoriyi Getir";
+            this.btnReadCategory.Text = "Kategoriyi getir";
             this.btnReadCategory.UseVisualStyleBackColor = true;
             this.btnReadCategory.Click += new System.EventHandler(this.btnReadCategory_Click);
             // 
-            // numCategoryID
+            // numCategoryId
             // 
-            this.numCategoryID.Location = new System.Drawing.Point(335, 106);
-            this.numCategoryID.Name = "numCategoryID";
-            this.numCategoryID.Size = new System.Drawing.Size(120, 23);
-            this.numCategoryID.TabIndex = 1;
+            this.numCategoryId.Location = new System.Drawing.Point(148, 39);
+            this.numCategoryId.Name = "numCategoryId";
+            this.numCategoryId.Size = new System.Drawing.Size(185, 27);
+            this.numCategoryId.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 108);
+            this.label1.Location = new System.Drawing.Point(26, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 15);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "KategoriID";
+            this.label1.Text = "Kategori ID";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numCategoryID);
+            this.Controls.Add(this.numCategoryId);
             this.Controls.Add(this.btnReadCategory);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numCategoryID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numCategoryId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,7 +80,7 @@ namespace AdoNetBasics
         #endregion
 
         private System.Windows.Forms.Button btnReadCategory;
-        private System.Windows.Forms.NumericUpDown numCategoryID;
+        private System.Windows.Forms.NumericUpDown numCategoryId;
         private System.Windows.Forms.Label label1;
     }
 }
