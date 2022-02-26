@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NullableValueTypes\\NullableValueTypes.csproj",
+      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NullableValueTypes\\NullableValueTypes.csproj",
       "projectName": "NullableValueTypes",
-      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NullableValueTypes\\NullableValueTypes.csproj",
+      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NullableValueTypes\\NullableValueTypes.csproj",
       "packagesPath": "C:\\Users\\faydn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NullableValueTypes\\obj\\",
+      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NullableValueTypes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\faydn\\AppData\\Roaming\\NuGet\\NuGet.Config",

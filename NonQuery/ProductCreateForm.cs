@@ -229,5 +229,6 @@ values (@productName, @supplierId, @categoryId, @quantityPerUnit,
 
             return product;
         }
+
     }
 }

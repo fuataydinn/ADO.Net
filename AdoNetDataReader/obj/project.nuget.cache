@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LB6BeMtH3xaSQS292rCYsC98CwKz0Y+G7EU1xrU2SdAJ9/Uxvq9sE72004VgZIsRncG2+F7Q0yMcSqhzAKDU1A==",
+  "dgSpecHash": "nkcjAsS1/OGhRotErpx8QXTxx07jk7x3PuKAt0TV68L0ByMBfXcw8ASBq3++gwbZsChU6Ut9WnWTkvTwPe2XBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\AdoNetDataReader\\AdoNetDataReader.csproj",
+  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\AdoNetDataReader\\AdoNetDataReader.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

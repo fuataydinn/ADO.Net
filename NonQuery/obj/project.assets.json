@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NonQuery\\NonQuery.csproj",
+      "projectUniqueName": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NonQuery\\NonQuery.csproj",
       "projectName": "NonQuery",
-      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NonQuery\\NonQuery.csproj",
+      "projectPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NonQuery\\NonQuery.csproj",
       "packagesPath": "C:\\Users\\faydn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\NonQuery\\obj\\",
+      "outputPath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\NonQuery\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\faydn\\AppData\\Roaming\\NuGet\\NuGet.Config",

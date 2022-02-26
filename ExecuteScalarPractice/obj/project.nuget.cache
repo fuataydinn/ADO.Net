@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RYHTDbK1/++X5gLx5a9O+VHMo6A7fUs3ljC+495CHnkLcrqxmzVgByXrWNFAMvtVx/iIc3Maz3825HPGJoXobQ==",
+  "dgSpecHash": "unwg4CbMRmNd6QvrREV2AR5L/4Lb+l94HV5QMsp7TKbRtczeS/ccJdSCHgk8bCQM/wzn8jDZLJUQd8tfNbMxIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\23AdoNet\\AdoNet\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
+  "projectFilePath": "C:\\Users\\faydn\\OneDrive\\Masaüstü\\Projects\\ADO.Net\\ADO.Net\\ExecuteScalarPractice\\ExecuteScalarPractice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\faydn\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

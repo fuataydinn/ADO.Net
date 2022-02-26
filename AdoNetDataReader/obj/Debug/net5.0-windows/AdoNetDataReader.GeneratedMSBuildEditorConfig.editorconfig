@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = AdoNetDataReader
-build_property.ProjectDir = C:\Users\faydn\OneDrive\Masaüstü\23AdoNet\AdoNet\AdoNetDataReader\
+build_property.ProjectDir = C:\Users\faydn\OneDrive\Masaüstü\Projects\ADO.Net\ADO.Net\AdoNetDataReader\
